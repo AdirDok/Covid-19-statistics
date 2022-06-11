@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 35vh 65vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'gc gd'
+    'bc bc';
+}
+
+.global-cases, .global-deaths{
+    display: grid;
+    grid-template-rows: 20% auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'ttl ttl'
+    'day totl';
+    background-color: #eeeeee98;
+    margin: 20px;
+    padding: 3vw;
+}
+
+.global-cases{
+    grid-area: gc;
+    margin-right: 10px;
+}
+
+.global-deaths{
+    grid-area: gd;
+    margin-left: 10px;
+}
+
+.by-country{
+    grid-area: bc;
+    overflow-y: auto;
+}
+
+.title{
+    grid-area: ttl;
+    /* text-align: center; */
+}
+
+.daily{
+    grid-area: day;
+}
+
+.total{
+    grid-area: totl;
+}
+
+h2{
+    padding-bottom: 40px;
+}
+
+p,h1{
+    padding: 10px 0;
+}
+
+table{
+    padding: 25px;
+    width: 100%;
+    text-align: left;
+    border-spacing: 0;
+}
+
+td{
+    padding: 7px 5px;
+}
+
+th{
+    padding-bottom: 7px;
+    font-size: larger;
+    position: sticky;
+    top: 0;
+    background-color: #FFF;
+}
+
+tbody:nth-child(even) {
+    background: #eeeeee98;
+    /* font-size: small; */
+}
+
+tbody:nth-child(odd) {
+    background: #FFF;
+    /* font-size: small; */
+}
+
+tbody:hover{
+    background: #a8a8a8f8
+}
+
+.by-country > input{ 
+    margin: 0 25px;
+    width: calc(100% - 50px);
+    padding: 5px;
+    font-size: x-large;
+}
